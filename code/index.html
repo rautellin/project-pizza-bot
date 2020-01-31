@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project 4: Pizzabot</title>
-  </head>
-  <body>
-    <h1>This is your Pizza Bot</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <img class="background" src="wallpaper.jpeg" alt="">
+
+  <main>
+
+
+
+    <section>
+      <form>
+        <div class="menu">
+          <label class="menu-button">
+            <p>Vegetarian pizza</p>
+            <input class="radio" type="radio" id="vegetarian" name="pizza" value="vegetarian" required>
+            <img src="vegetarian.png" alt="">
+          </label>
+
+
+          <label class="menu-button">
+            <p> Mexican pizza </p>
+            <input class="radio" type="radio" id="mexican" name="pizza" value="mexican">
+            <img src="mexican.png" alt="">
+          </label>
+
+          <label class="menu-button">
+            <p>Pepperoni pizza</p>
+            <input class="radio" type="radio" id="mexican" name="pizza" value="pepperoni">
+            <img src="pepperoni.png" alt="">
+          </label>
+        </div>
+
+        <label class="amount-field">
+          <h2>How hungry are ya?</h4>
+            <p>Please, fill in how many pizzas you want</p>
+            <input type="text" required>
+        </label>
+
+        <input type="submit">
+      </form>
+    </section>
+  </main>
+
+
+  <!-- <script src="pizzabot.js"></script> -->
+</body>
+
 </html>
