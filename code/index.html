@@ -15,28 +15,29 @@
 
   <main>
 
-
-
     <section>
       <form>
+        <section class="container-bubble-bot">
+          <p id="bubble" class="bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quos</p>
+        </section>
         <div class="menu">
           <label class="menu-button">
-            <p>Vegetarian pizza</p>
             <input class="radio" type="radio" id="vegetarian" name="pizza" value="vegetarian" required>
+            <p>Vegetarian pizza</p>
             <img src="vegetarian.png" alt="">
           </label>
 
 
           <label class="menu-button">
-            <p> Mexican pizza </p>
-            <input class="radio" type="radio" id="mexican" name="pizza" value="mexican">
-            <img src="mexican.png" alt="">
+            <input class="radio" type="radio" id="mexican" name="pizza" value="pepperoni">
+            <p>Pepperoni pizza</p>
+            <img src="pepperoni.png" alt="">
           </label>
 
           <label class="menu-button">
-            <p>Pepperoni pizza</p>
-            <input class="radio" type="radio" id="mexican" name="pizza" value="pepperoni">
-            <img src="pepperoni.png" alt="">
+            <input class="radio" type="radio" id="mexican" name="pizza" value="mexican">
+            <p> Mexican pizza </p>
+            <img src="mexican.png" alt="">
           </label>
         </div>
 
@@ -46,7 +47,11 @@
             <input type="text" required>
         </label>
 
-        <input type="submit">
+        <label class="submit">
+          <input class="submit-button" type="submit">
+          <p>Send me pizza!</p>
+          <img src="pizza.png" alt="">
+        </label>
       </form>
     </section>
   </main>

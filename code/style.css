@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,400&display=swap');
+
+
+/* ---- MAIN STYLING ----- */
 
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 20px;
+  outline: none;
+  text-transform: uppercase;
 }
 
 body{
   background: linear-gradient(45deg, teal, black);
 }
+
 .background{
   position: absolute;
   height: 100vh;
@@ -26,6 +32,48 @@ main {
   height: 100vh;
 }
 
+/* ---- SPEECH BUBBLE ---- */
+
+
+p.bubble {
+	position: relative;
+	width: 300px;
+	text-align: center;
+	line-height: 1.4em;
+	margin: 40px auto;
+	background-color: #fff;
+	border: 4px solid black;
+	border-radius: 30px;
+  padding: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
+}
+
+p.bubble:before,
+p.bubble:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+p.bubble:before {
+	left: 34px;
+	bottom: -40px;
+	border: 20px solid;
+  border-color: black transparent transparent black;
+  
+}
+
+p.bubble:after {
+	left: 38px;
+	bottom: -30px;
+	border: 20px solid;
+	border-color: #fff transparent transparent #fff;
+}
+
+
+/* ---- MAIN STYLING FOR FORM INPUT ---- */
+
 form {
   display: flex;
   flex-direction: column;
@@ -35,9 +83,10 @@ form {
   height: 100vh;
 }
 
+/* ---- PIZZA MENU ----- */
+
 .menu{
   display: flex;
-  text-transform: uppercase;
 }
 
 .radio {
@@ -46,29 +95,92 @@ form {
   display: none;
 }
 
-.radio + img{
+.radio ~ img{
   opacity: 0.55;
-  margin: 1rem;
 }
 
-.radio:checked + img{
+.radio:checked ~ img{
   opacity: 1;
 }
 
+.radio ~ p{
+  opacity: 0.55;
+}
+
+.radio:checked ~ p{
+  opacity: 1;
+}
 
 .menu-button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5rem;
   padding: 1rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
   border-radius: 20px;
   cursor: pointer;
+  width: 160px;
+  height: 120px;
 }
+
+/* ---- AMOUNT BUTTON ----  */
 
 .amount-field{
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-weight: 200;
+}
+.amount-field p{
+  font-size: 16px;
+}
+
+.amount-field input{
+  transition: all 0.30s ease-in-out;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  width: 160px;
+}
+
+.amount-field input:focus{
+  background-color: #FDCA3D;
+}
+
+/* ---- SUBMIT BUTTON ----- */
+
+.submit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin: 0.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
+  border-radius: 20px;
+  cursor: pointer;
+  width: 160px;
+  padding-top: 0.5rem;
+}
+
+.submit-button {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.submit-button ~ img{
+  opacity: 0.55;
+}
+
+.submit-button:hover ~ img{
+  opacity: 1;
+}
+
+.submit-button ~ p{
+  opacity: 0.55;
+}
+
+.submit-button:hover ~ p{
+  opacity: 1;
 }
