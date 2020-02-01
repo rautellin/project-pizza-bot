@@ -97,6 +97,8 @@ else {
 
 // Iteration 6
 
+/*
+
 const vegetarian = "Vegetarian Pizza"
 const mexican = "Mexican Pizza"
 const pepperoni = "Pepperoni Pizza"
@@ -160,6 +162,92 @@ const order = (orderResult) => {
 }
 
 order(orderResult);
+
+*/
+
+// Iteration 7
+
+
+// ------ SELECTED PIZZA ----- //
+
+
+//function for selected pizza
+const selectedPizza = () => {
+  if (document.getElementById("vegetarian").checked) {
+    return ("Vegatarian pizza");
+  }
+  else if (document.getElementById("pepperoni").checked) {
+    return ("Pepperoni pizza");
+  }
+  else if (document.getElementById("mexican").checked) {
+    return ("Mexican pizza");
+  }
+  else {
+    return false;
+  }
+}
+
+
+// ------ AMOUNT OF PIZZAS ----- //
+
+
+//function for amount of pizzas, parseInt turns a string into an int
+const orderQuantity = () => {
+  const amount = parseInt(document.getElementById("amount").value);
+  return amount;
+}
+
+
+
+// ----- TOTAL PRICE ------ //
+
+
+const pizzaPrice = 80
+
+//function that calculates the total price
+const orderTotal = (amount) => {
+  return pizzaPrice * amount;
+}
+
+
+// ------ TOTAL TIME ----- //
+
+
+//function that calculates the cooking time
+const cookingTime = (amount) => {
+  if (amount < 3) {
+    return (10);
+  }
+  else if (amount < 6) {
+    return (15);
+  }
+  else {
+    return (20);
+  }
+}
+
+// -------- pig ------- //
+
+const gif = document.createElement("img");
+gif.src = "http://i.imgur.com/A1QWnDZ.gif";
+const gifParent = document.getElementById("gif");
+
+
+
+
+// ------- SUBMIT AN ORDER ----- //
+
+
+// function for submit button
+const placeOrder = () => {
+  var orderName = selectedPizza();
+  var amount = orderQuantity();
+  var totalPrice = orderTotal(amount);
+  var totaltime = cookingTime(amount);
+  gifParent.appendChild(gif);
+  document.getElementById("bubble").innerHTML = `Great, I'll get started on your ${orderName} right away. It will cost ${totalPrice} kronor. The pizzas will take ${totaltime} minutes.`;
+}
+
 
 
 

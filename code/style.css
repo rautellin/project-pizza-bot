@@ -46,6 +46,7 @@ p.bubble {
 	border-radius: 30px;
   padding: 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
+  text-transform: none;
 }
 
 p.bubble:before,
@@ -80,7 +81,11 @@ form {
   align-items: center;
   justify-content: center;
   background-color: white;
-  height: 100vh;
+  height: 90vh;
+  width: 50vw;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
+  padding: 1rem;
 }
 
 /* ---- PIZZA MENU ----- */
@@ -131,6 +136,7 @@ form {
   flex-direction: column;
   align-items: center;
   font-weight: 200;
+  margin-top: 0.25rem;
 }
 .amount-field p{
   font-size: 16px;
@@ -155,12 +161,12 @@ form {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  margin: 0.5rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
   border-radius: 20px;
   cursor: pointer;
   width: 160px;
   padding-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .submit-button {
@@ -183,4 +189,19 @@ form {
 
 .submit-button:hover ~ p{
   opacity: 1;
+}
+
+/* ----- GIF ------ */
+
+.gif{
+  position: absolute;
+  left: 25vw; /*25+3*/
+  bottom: 5vh; /*5+3*/
+  height: 112px;
+}
+
+.gif img {
+  max-width: 200px;
+  object-fit: cover;
+  border-radius: 20px;
 }

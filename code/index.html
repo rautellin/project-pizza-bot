@@ -18,7 +18,10 @@
     <section>
       <form>
         <section class="container-bubble-bot">
-          <p id="bubble" class="bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quos</p>
+
+          <p id="bubble" class="bubble">Hey! I'm happy to serve your pizza. Please, select the pizza you want to order
+            today from our menu below.
+          </p>
         </section>
         <div class="menu">
           <label class="menu-button">
@@ -29,7 +32,7 @@
 
 
           <label class="menu-button">
-            <input class="radio" type="radio" id="mexican" name="pizza" value="pepperoni">
+            <input class="radio" type="radio" id="pepperoni" name="pizza" value="pepperoni">
             <p>Pepperoni pizza</p>
             <img src="pepperoni.png" alt="">
           </label>
@@ -44,20 +47,23 @@
         <label class="amount-field">
           <h2>How hungry are ya?</h4>
             <p>Please, fill in how many pizzas you want</p>
-            <input type="text" required>
+            <input type="text" required id="amount">
         </label>
 
-        <label class="submit">
+        <label class="submit" onclick="placeOrder(); return false;">
           <input class="submit-button" type="submit">
           <p>Send me pizza!</p>
-          <img src="pizza.png" alt="">
+          <!-- <img src="pizza.png" alt=""> -->
         </label>
+
+        <div id="gif" class="gif"></div>
       </form>
+
     </section>
   </main>
 
 
-  <!-- <script src="pizzabot.js"></script> -->
+  <script src="pizzabot.js"></script>
 </body>
 
 </html>
