@@ -171,11 +171,19 @@ form {
   opacity: 1;
 }
 
+.radio:hover ~ img{
+  opacity: 1;
+}
+
 .radio ~ p{
   opacity: 0.55;
 }
 
 .radio:checked ~ p{
+  opacity: 1;
+}
+
+.radio:hover ~ p{
   opacity: 1;
 }
 
