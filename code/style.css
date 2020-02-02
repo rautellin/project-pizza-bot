@@ -13,16 +13,35 @@
 }
 
 body{
-  background: linear-gradient(45deg, teal, black);
+  background-color: teal;
 }
 
-.background{
-  position: absolute;
+/* ---- BACKGROUND IMAGE ----- */
+
+
+.hero-image {
   height: 100vh;
-  width: 50vw;
-  object-fit: cover;
+  width: 60vw;
   z-index: -1;
+  position: absolute;
 }
+
+.hero-image::after {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0,teal 100%);
+  width: 300px;
+  height: 100%;
+  margin-left: -300px;
+  position: absolute;
+  content: '';
+}
+
+#background{
+  width: 60vw;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+/* ----- MAIN ---- */
 
 main {
   display: flex;
@@ -32,44 +51,45 @@ main {
   height: 100vh;
 }
 
+/* ----- BOT IMAGE ----- */
+
+.container-bubble-bot {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container-bubble-bot img {
+  width: 150px;
+  margin-right: 1rem;
+}
+
 /* ---- SPEECH BUBBLE ---- */
 
 
-p.bubble {
-	position: relative;
-	width: 300px;
-	text-align: center;
-	line-height: 1.4em;
-	margin: 40px auto;
-	background-color: #fff;
-	border: 4px solid black;
-	border-radius: 30px;
+p.bubble{
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 6px #B2B2B2;
+  width:  300px;
+  text-align: center;
+  line-height: 1.4em;
   padding: 20px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
   text-transform: none;
+  position: relative;
 }
 
-p.bubble:before,
-p.bubble:after {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-}
-
-p.bubble:before {
-	left: 34px;
-	bottom: -40px;
-	border: 20px solid;
-  border-color: black transparent transparent black;
-  
-}
-
-p.bubble:after {
-	left: 38px;
-	bottom: -30px;
-	border: 20px solid;
-	border-color: #fff transparent transparent #fff;
+p.bubble::after {
+  background-color: #fff;
+  box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+  content: "\00a0";
+  display: block;
+  height: 20px;
+  left: -10px;
+  position: absolute;
+  top: 50px;
+  transform: rotate( 45deg );
+  width:  20px;
 }
 
 
@@ -81,10 +101,10 @@ form {
   align-items: center;
   justify-content: center;
   background-color: white;
-  height: 90vh;
-  width: 50vw;
+  height: 460px;
+  width: 560px;
   border-radius: 20px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
   padding: 1rem;
 }
 
@@ -122,11 +142,11 @@ form {
   align-items: center;
   margin: 0.5rem;
   padding: 1rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
+  box-shadow: 0px 0px 6px #B2B2B2;
   border-radius: 20px;
   cursor: pointer;
   width: 160px;
-  height: 120px;
+  height: 100px;
 }
 
 /* ---- AMOUNT BUTTON ----  */
@@ -151,7 +171,7 @@ form {
 }
 
 .amount-field input:focus{
-  background-color: #FDCA3D;
+  background-color: #FEB220;
 }
 
 /* ---- SUBMIT BUTTON ----- */
@@ -161,11 +181,12 @@ form {
   flex-direction: column;
   align-items: center;
   align-content: center;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.576);
+  box-shadow: 0px 0px 6px #B2B2B2;
+  background-color: #feb220;
   border-radius: 20px;
   cursor: pointer;
   width: 160px;
-  padding-top: 0.5rem;
+  padding-top: 0.25rem;
   margin-top: 0.25rem;
 }
 
@@ -187,21 +208,11 @@ form {
   opacity: 0.55;
 }
 
+.submit:hover{
+  background-color: teal;
+}
+
 .submit-button:hover ~ p{
   opacity: 1;
 }
 
-/* ----- GIF ------ */
-
-.gif{
-  position: absolute;
-  left: 25vw; /*25+3*/
-  bottom: 5vh; /*5+3*/
-  height: 112px;
-}
-
-.gif img {
-  max-width: 200px;
-  object-fit: cover;
-  border-radius: 20px;
-}

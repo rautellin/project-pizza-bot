@@ -100,13 +100,13 @@ else {
 /*
 
 const vegetarian = "Vegetarian Pizza"
-const mexican = "Mexican Pizza"
+const hawaiian = "hawaiian Pizza"
 const pepperoni = "Pepperoni Pizza"
 
 const pizzaPrice = 80
 
 //Welcome message
-alert("Hey! Happy to serve your pizza. On our menu we have " + vegetarian + ", " + mexican + " and " + pepperoni);
+alert("Hey! Happy to serve your pizza. On our menu we have " + vegetarian + ", " + hawaiian + " and " + pepperoni);
 
 //Variable for orderName
 const orderName = prompt("Enter the name of the pizza you want to order today.");
@@ -179,8 +179,8 @@ const selectedPizza = () => {
   else if (document.getElementById("pepperoni").checked) {
     return ("Pepperoni pizza");
   }
-  else if (document.getElementById("mexican").checked) {
-    return ("Mexican pizza");
+  else if (document.getElementById("hawaiian").checked) {
+    return ("Hawaiian pizza");
   }
   else {
     return false;
@@ -226,13 +226,6 @@ const cookingTime = (amount) => {
   }
 }
 
-// -------- pig ------- //
-
-const gif = document.createElement("img");
-gif.src = "http://i.imgur.com/A1QWnDZ.gif";
-const gifParent = document.getElementById("gif");
-
-
 
 
 // ------- SUBMIT AN ORDER ----- //
@@ -244,7 +237,6 @@ const placeOrder = () => {
   var amount = orderQuantity();
   var totalPrice = orderTotal(amount);
   var totaltime = cookingTime(amount);
-  gifParent.appendChild(gif);
   document.getElementById("bubble").innerHTML = `Great, I'll get started on your ${orderName} right away. It will cost ${totalPrice} kronor. The pizzas will take ${totaltime} minutes.`;
 }
 
