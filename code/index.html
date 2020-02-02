@@ -15,6 +15,15 @@
   </div>
   <main>
 
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <span id="closeBtn" class="closeBtn">&times;</span>
+        <img src="lovebot.png" alt="">
+        <p id="bubble" class="bubble">Insert text from javascript
+        </p>
+      </div>
+    </div>
+
     <section>
       <form>
         <section class="container-bubble-bot">
@@ -50,7 +59,7 @@
             <input type="text" required id="amount">
         </label>
 
-        <label class="submit" onclick="placeOrder(); return false;">
+        <label id="modalBtn" class="submit" onclick="placeOrder(); return false;">
           <input class="submit-button" type="submit">
           <p>Send me pizza!</p>
           <!-- <img src="pizza.png" alt=""> -->
