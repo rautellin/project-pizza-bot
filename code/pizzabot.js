@@ -237,7 +237,7 @@ const placeOrder = () => {
   var amount = orderQuantity();
   var totalPrice = orderTotal(amount);
   var totaltime = cookingTime(amount);
-  document.getElementById("bubble").innerHTML = `Great, I'll get started on your ${orderName} right away. It will cost ${totalPrice} kronor. The pizzas will take ${totaltime} minutes.`;
+  document.getElementById("bubble").innerHTML = `Wohoo, pizza time! I'll get started on your ${orderName}. The order will cost ${totalPrice} kronor and will only take ${totaltime} minutes.`;
 }
 
 /* ----- MODAL BOX ----- */
