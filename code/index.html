@@ -18,14 +18,14 @@
     <div id="simpleModal" class="modal">
       <div class="modal-content">
         <span id="closeBtn" class="closeBtn">&times;</span>
-        <img src="lovebot.png" alt="">
+        <img id="modalBot" src="lovebot.png" alt="">
         <p id="bubble" class="bubble">Insert text from javascript
         </p>
       </div>
     </div>
 
     <section>
-      <form>
+      <form name="myForm">
         <section class="container-bubble-bot">
           <img src="happybot.png" alt="">
           <p id="bubble" class="bubble">Oh, hey! I'm so excited to serve your pizza today. Please, select the pizza you
@@ -57,10 +57,10 @@
         <label class="amount-field">
           <h2>How hungry are ya?</h4>
             <p>Please, fill in how many pizzas you want</p>
-            <input type="text" required id="amount">
+            <input type="text" required id="amount" name="amount">
         </label>
 
-        <label id="modalBtn" class="submit" onclick="placeOrder(); return false;">
+        <label id="modalBtn" class="submit" onclick="validateForm(); return false;">
           <input class="submit-button" type="submit">
           <p>Send me pizza!</p>
           <!-- <img src="pizza.png" alt=""> -->

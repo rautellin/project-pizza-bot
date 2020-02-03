@@ -230,14 +230,34 @@ const cookingTime = (amount) => {
 
 // ------- SUBMIT AN ORDER ----- //
 
+// Function for form validation
+const validateForm = () => {
+  const menu = document.forms["myForm"]["pizza"].value;
+  const amount = document.forms["myForm"]["amount"].value;
+  const orderName = selectedPizza();
+  if (menu == "") {
+    document.getElementById("bubble").innerHTML = "Oh no, pizza bot is confused because something is missing. Please let me know what pizza you fancy today!";
+    document.getElementById("modalBot").src = "errorbot.png";
+    return false;
+  }
+  else if (amount == "") {
+    document.getElementById("bubble").innerHTML = `Oh no, pizza bot is confused because something is missing. Please fill in how many of ${orderName} you want!`;
+    document.getElementById("modalBot").src = "errorbot.png";
+    return false;
+  }
+  else {
+    placeOrder();
+  }
+}
 
-// function for submit button
+// Function for submit button
 const placeOrder = () => {
   var orderName = selectedPizza();
   var amount = orderQuantity();
   var totalPrice = orderTotal(amount);
   var totaltime = cookingTime(amount);
   document.getElementById("bubble").innerHTML = `Wohoo, pizza time! I'll get started on your ${orderName}. The order will cost ${totalPrice} kronor and will only take ${totaltime} minutes.`;
+  document.getElementById("modalBot").src = "lovebot.png";
 }
 
 /* ----- MODAL BOX ----- */
@@ -251,15 +271,15 @@ const modalBtn = document.getElementById("modalBtn");
 // Get close button
 const closeBtn = document.getElementById("closeBtn");
 
-// Listen for open click
+// Listen for open click and open touch (on mobile devices)
 modalBtn.addEventListener("click", openModal);
 modalBtn.addEventListener("touchstart", openModal);
 
-// Listen for close click
+// Listen for close click and close touch (on mobile devices)
 closeBtn.addEventListener("click", closeModal);
 closeBtn.addEventListener("touchstart", closeModal);
 
-// Listen for outside click
+// Listen for outside click and outside touch (on mobile devices)
 window.addEventListener("click", outsideClick);
 window.addEventListener("touchstart", outsideClick);
 
@@ -275,7 +295,7 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-// Function to close modal if outside click
+// Function to close modal if outside click/touch
 function outsideClick(e) {
   if (e.target == modal) {
     modal.style.display = "none";
