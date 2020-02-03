@@ -253,12 +253,15 @@ const closeBtn = document.getElementById("closeBtn");
 
 // Listen for open click
 modalBtn.addEventListener("click", openModal);
+modalBtn.addEventListener("touchstart", openModal);
 
 // Listen for close click
 closeBtn.addEventListener("click", closeModal);
+closeBtn.addEventListener("touchstart", closeModal);
 
 // Listen for outside click
 window.addEventListener("click", outsideClick);
+window.addEventListener("touchstart", outsideClick);
 
 // Function to open modal
 function openModal() {
