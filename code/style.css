@@ -274,12 +274,7 @@ p.bubble::after {
 
 /* ---- MEDIA ----- */
 
-@media (max-width: 500px){
- .container-bubble-bot{
-   display: flex;
-   flex-direction: column;
- }
- 
+@media (max-width: 500px){ 
  form {
    height: 600px;
    width: 350px;
@@ -289,10 +284,19 @@ p.bubble::after {
    background-color: white;
  }
 
- .menu {
+ /* .menu {
   overflow-x: auto;
   white-space: nowrap;
- }
+ } */
+
+ .container-bubble-bot{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-bubble-bot img {
+  margin-bottom: 1.5rem;
+}
 
  p.bubble::after {
   box-shadow: -2px -2px 2px 0 rgba( 178, 178, 178, .4 );
@@ -301,7 +305,15 @@ p.bubble::after {
   top: -10px;
 }
 
-.container-bubble-bot img {
-  margin-bottom: 1.5rem;
+.modal-content{
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
 }
+
+.modal-content img{
+  margin-bottom: 1rem;
+}
+
 }

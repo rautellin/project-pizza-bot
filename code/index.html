@@ -60,10 +60,10 @@
             <input type="text" required id="amount" name="amount">
         </label>
 
-        <label id="modalBtn" class="submit" onclick="validateForm(); return false;">
+        <label id="modalBtn" class="submit" ontouchstart="validateForm(); return false;"
+          onclick="validateForm(); return false;">
           <input class="submit-button" type="submit">
           <p>Send me pizza!</p>
-          <!-- <img src="pizza.png" alt=""> -->
         </label>
 
         <div id="gif" class="gif"></div>
