@@ -275,19 +275,35 @@ p.bubble::after {
 /* ---- MEDIA ----- */
 
 @media (max-width: 500px){ 
- form {
-   height: 600px;
-   width: 350px;
+main{
+  display: initial;
+}
+
+form{
+  all: unset;
+  height: 600px;
+}
+
+.form-section{
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+  padding: 2rem 0;
+  margin: 25% 5px;
+}
+
+
+.menu{
+   white-space: nowrap;
+   overflow-x: scroll;
+   overflow-y: hidden;
  }
+
+ .menu::-webkit-scrollbar{ display: none;}
 
  .menu-button{
    background-color: white;
  }
-
- /* .menu {
-  overflow-x: auto;
-  white-space: nowrap;
- } */
 
  .container-bubble-bot{
   display: flex;
@@ -303,6 +319,10 @@ p.bubble::after {
   height: 20px;
   left: 130px;
   top: -10px;
+}
+
+.submit{
+  margin: 0.5rem auto;
 }
 
 .modal-content{
