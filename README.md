@@ -1,13 +1,15 @@
 # Pizza Bot
 
-Replace this readme with your own information about your project. 
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Smaller pizza app built with html, css and javascript. Functions such as orderconfirmation and price/time calculation. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Had some issues with form validation and making elements scroll horizontally in mobile view. 
+
+Approached issues mainly by using tutorials on youtube, w3schools and MDN. 
+
+If I had more time I would pay more attention on the layout for the mobile version. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://rautellin-pizza-bot.netlify.com/
